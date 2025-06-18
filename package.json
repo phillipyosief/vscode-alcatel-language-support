@@ -3,6 +3,17 @@
   "displayName": "alcatel-language-support",
   "description": "Provides full language support for Alcatel-Lucent switch configurations, including syntax highlighting, autocomplete, hover documentation, and integrated command reference.",
   "version": "0.0.1",
+  "publisher": "Phillip Jerome Yosief",
+  "author": {
+    "name": "Phillip Jerome Yosief",
+    "email": "phillip.yosief@outlook.com"
+  },
+  "preview": true,
+  "icon": "assets/images/qs-icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phillipyosief/vscode-alcatel-language-support"
+  },
   "engines": {
     "vscode": "^1.54.0"
   },
