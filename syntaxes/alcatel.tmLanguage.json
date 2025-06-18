@@ -1,0 +1,43 @@
+{
+  "name": "alcatel",
+  "scopeName": "source.alcatel",
+  "fileTypes": ["ale", "alcatel"],
+  "patterns": [
+    {
+      "name": "comment.line.alcatel",
+      "match": "^\\s*!(.*$)"
+    },
+    {
+      "name": "keyword.control.alcatel",
+      "match": "\\b(vlan|interface|ip|route|spanning-tree|lldp|system|auto-fabric|aaa|qos|auto-fabric-abort|session|policy|interfaces|mvrp|lanpower)\\b"
+    },
+    {
+      "name": "variable.parameter.alcatel",
+      "match": "\\b(server|port|client|contact|cli|timeout|timezone|protocols|admin-state|location|address|members|name|service|source-ip|mask|vlan|udp-port|application|tcp-port|prompt|condition|rule|action|precedence|group|gateway|static-route|metric|router-id|speed|max|pvst\\+compatibility|chassis|tlv|med|network-policy|system-name|system-description|port-description|management-address)\\b"
+    },
+    {
+      "name": "constant.numeric.alcatel",
+      "match": "\\b\\d+\\b"
+    },
+    {
+      "name": "string.quoted.double.alcatel",
+      "match": "\"[^\"]*\""
+    },
+    {
+      "name": "keyword.other.enable.alcatel",
+      "match": "\\b(enable|on|true)\\b"
+    },
+    {
+      "name": "keyword.other.disable.alcatel",
+      "match": "\\b(disable|off|false)\\b"
+    },
+    {
+      "name": "support.function.alcatel",
+      "match": "\\b(admin-state|mode)\\b"
+    },
+    {
+      "name": "entity.name.tag.hyphenated-word.alcatel",
+      "match": "\\b([a-z]+-[a-z0-9-]+)\\b"
+    }
+  ]
+}

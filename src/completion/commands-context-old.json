@@ -1,0 +1,855 @@
+{
+"vlan": {
+  "pattern": "^vlan\\s+(\\d+(-\\d+)?)$",
+  "options": [
+    "admin-state",
+    "members",
+    "name"
+  ]
+},
+
+"vlan-admin-state": {
+  "pattern": "^vlan\\s+(\\d+(-\\d+)?)\\s+admin-state$",
+  "options": [
+    "enable",
+    "disable"
+  ]
+},
+
+"vlan-members": {
+  "pattern": "^vlan\\s+(\\d+(-\\d+)?)\\s+members$",
+  "options": [
+    "port",
+    "linkagg"
+  ]
+},
+
+"vlan-members-port": {
+  "pattern": "^vlan\\s+(\\d+(-\\d+)?)\\s+members\\s+port$",
+  "options": [
+    "<chassis/slot/port>",
+    "<chassis/slot/port-port>"
+  ]
+},
+
+"vlan-members-port-tag": {
+  "pattern": "^vlan\\s+(\\d+(-\\d+)?)\\s+members\\s+port\\s+\\S+$",
+  "options": [
+    "tagged",
+    "untagged"
+  ]
+},
+
+"vlan-members-linkagg": {
+  "pattern": "^vlan\\s+(\\d+(-\\d+)?)\\s+members\\s+linkagg$",
+  "options": [
+    "<linkagg>",
+    "<linkagg-linkagg>"
+  ]
+},
+
+"vlan-members-linkagg-tag": {
+  "pattern": "^vlan\\s+(\\d+(-\\d+)?)\\s+members\\s+linkagg\\s+\\S+$",
+  "options": [
+    "tagged",
+    "untagged"
+  ]
+},
+
+"vlan-name": {
+  "pattern": "^vlan\\s+(\\d+(-\\d+)?)\\s+name$",
+  "options": [
+    "<string>"
+  ]
+},
+  "ip": {
+    "pattern": "^ip$",
+    "options": [
+      "static-route",
+      "service",
+      "interface",
+      "router"
+    ]
+  },
+
+  "ip-static-route": {
+    "pattern": "^ip\\s+static-route\\s+\\d+\\.\\d+\\.\\d+\\.\\d+/\\d+$",
+    "options": [
+      "follows",
+      "gateway",
+      "interface"
+    ]
+  },
+
+  "ip-static-route-follows": {
+    "pattern": "^ip\\s+static-route\\s+\\S+\\s+follows\\s+\\d+\\.\\d+\\.\\d+\\.\\d+$",
+    "options": [
+      "metric"
+    ]
+  },
+
+  "ip-static-route-gateway": {
+    "pattern": "^ip\\s+static-route\\s+\\S+\\s+gateway\\s+\\d+\\.\\d+\\.\\d+\\.\\d+$",
+    "options": [
+      "metric"
+    ]
+  },
+
+  "ip-static-route-interface": {
+    "pattern": "^ip\\s+static-route\\s+\\S+\\s+interface\\s+\\S+$",
+    "options": [
+      "metric"
+    ]
+  },
+
+  "ip-static-route-metric": {
+    "pattern": "metric$",
+    "options": [
+      "<number>"
+    ]
+  },
+
+  "ip-service": {
+    "pattern": "^ip\\s+service$",
+    "options": [
+      "all", "ftp", "http", "https", "ntp",
+      "port", "radius", "snmp", "source-ip", "ssh", "telnet"
+    ]
+  },
+
+  "ip-service-option": {
+    "pattern": "^ip\\s+service\\s+(all|ftp|http|https|ntp|port|radius|snmp|source-ip|ssh|telnet)$",
+    "options": [
+      "admin-state",
+      "port"
+    ]
+  },
+
+  "ip-service-option-admin-state": {
+    "pattern": "admin-state$",
+    "options": [
+      "enable",
+      "disable"
+    ]
+  },
+
+  "ip-service-option-port": {
+    "pattern": "port$",
+    "options": [
+      "<port-number>"
+    ]
+  },
+
+  "ip-interface": {
+    "pattern": "^ip\\s+interface\\s+\\S+$",
+    "options": [
+      "admin-state",
+      "ifindex",
+      "vlan",
+      "address"
+    ]
+  },
+
+  "ip-interface-admin-state": {
+    "pattern": "admin-state$",
+    "options": [
+      "enable",
+      "disable"
+    ]
+  },
+
+  "ip-interface-ifindex": {
+    "pattern": "ifindex$",
+    "options": [
+      "<number>"
+    ]
+  },
+
+  "ip-interface-vlan": {
+    "pattern": "vlan$",
+    "options": [
+      "<vlan-id>"
+    ]
+  },
+
+  "ip-interface-address": {
+    "pattern": "address$",
+    "options": [
+      "<ip>/<cidr>"
+    ]
+  },
+
+  "ip-router": {
+    "pattern": "^ip\\s+router$",
+    "options": [
+      "router-id",
+      "primary-address"
+    ]
+  },
+
+  "ip-router-router-id": {
+    "pattern": "^ip\\s+router\\s+router-id$",
+    "options": [
+      "<ip>"
+    ]
+  },
+
+  "ip-router-primary-address": {
+    "pattern": "^ip\\s+router\\s+primary-address$",
+    "options": [
+      "<ip>"
+    ]
+  },
+
+   "spantree-vlan-port": {
+    "pattern": "^spantree\\s+vlan\\s+\\d+\\s+port\\s+\\S+$",
+    "options": [
+      "admin-state",
+      "bpdu-guard",
+      "portfast",
+      "cost",
+      "priority"
+    ]
+  },
+
+  "spantree-vlan-port-admin-state": {
+    "pattern": "^spantree\\s+vlan\\s+\\d+\\s+port\\s+\\S+\\s+admin-state$",
+    "options": [
+      "enable",
+      "disable"
+    ]
+  },
+
+  "spantree-vlan-port-bpdu-guard": {
+    "pattern": "^spantree\\s+vlan\\s+\\d+\\s+port\\s+\\S+\\s+bpdu-guard$",
+    "options": [
+      "enable",
+      "disable"
+    ]
+  },
+
+  "spantree-vlan-port-portfast": {
+    "pattern": "^spantree\\s+vlan\\s+\\d+\\s+port\\s+\\S+\\s+portfast$",
+    "options": [
+      "enable",
+      "disable"
+    ]
+  },
+
+  "spantree-vlan-port-cost": {
+    "pattern": "^spantree\\s+vlan\\s+\\d+\\s+port\\s+\\S+\\s+cost$",
+    "options": [
+      "<value>"
+    ]
+  },
+
+  "spantree-vlan-port-priority": {
+    "pattern": "^spantree\\s+vlan\\s+\\d+\\s+port\\s+\\S+\\s+priority$",
+    "options": [
+      "<value>"
+    ]
+  },
+"lldp": {
+    "pattern": "^lldp$",
+    "options": [
+      "admin-state",
+      "med",
+      "port"
+    ]
+  },
+
+  "lldp-admin-state": {
+    "pattern": "^lldp\\s+admin-state$",
+    "options": [
+      "enable",
+      "disable"
+    ]
+  },
+
+  "lldp-med": {
+    "pattern": "^lldp\\s+med$",
+    "options": [
+      "admin-state",
+      "location",
+      "network-policy"
+    ]
+  },
+
+  "lldp-med-admin-state": {
+    "pattern": "^lldp\\s+med\\s+admin-state$",
+    "options": [
+      "enable",
+      "disable"
+    ]
+  },
+
+  "lldp-port": {
+    "pattern": "^lldp\\s+port\\s+\\S+$",
+    "options": [
+      "admin-state",
+      "tlv",
+      "med"
+    ]
+  },
+
+  "lldp-port-admin-state": {
+    "pattern": "^lldp\\s+port\\s+\\S+\\s+admin-state$",
+    "options": [
+      "enable",
+      "disable"
+    ]
+  },
+
+  "lldp-port-tlv": {
+    "pattern": "^lldp\\s+port\\s+\\S+\\s+tlv$",
+    "options": [
+      "system-name",
+      "system-description",
+      "port-description",
+      "management-address"
+    ]
+  },
+
+  "lldp-port-med": {
+    "pattern": "^lldp\\s+port\\s+\\S+\\s+med$",
+    "options": [
+      "location",
+      "network-policy"
+    ]
+  },
+  "system": {
+    "pattern": "^system$",
+    "options": [
+      "name",
+      "contact",
+      "location",
+      "prompt",
+      "timezone",
+      "admin-state"
+    ]
+  },
+
+  "system-name": {
+    "pattern": "^system\\s+name$",
+    "options": [
+      "<string>"
+    ]
+  },
+
+  "system-contact": {
+    "pattern": "^system\\s+contact$",
+    "options": [
+      "<string>"
+    ]
+  },
+
+  "system-location": {
+    "pattern": "^system\\s+location$",
+    "options": [
+      "<string>"
+    ]
+  },
+
+  "system-prompt": {
+    "pattern": "^system\\s+prompt$",
+    "options": [
+      "<string>"
+    ]
+  },
+
+  "system-timezone": {
+    "pattern": "^system\\s+timezone$",
+    "options": [
+      "utc", "cet", "est", "pst", "gmt", "cst", "mst"
+    ]
+  },
+
+  "system-admin-state": {
+    "pattern": "^system\\s+admin-state$",
+    "options": [
+      "enable",
+      "disable"
+    ]
+  },
+  "auto-fabric": {
+    "pattern": "^auto-fabric$",
+    "options": [
+      "admin-state",
+      "protocols"
+    ]
+  },
+
+"auto-fabric-admin-state": {
+  "pattern": "^auto-fabric\\s+admin-state$",
+  "options": [
+    "enable",
+    "disable"
+  ]
+},
+
+  "auto-fabric-admin-state-disable": {
+    "pattern": "^auto-fabric\\s+admin-state\\s+disable$",
+    "options": [
+      "remove-global-config"
+    ]
+  },
+
+  "auto-fabric-protocols": {
+    "pattern": "^auto-fabric\\s+protocols$",
+    "options": [
+      "mvrp",
+      "lacp"
+    ]
+  },
+
+  "auto-fabric-protocols-mvrp": {
+    "pattern": "^auto-fabric\\s+protocols\\s+mvrp$",
+    "options": [
+      "admin-state"
+    ]
+  },
+
+  "auto-fabric-protocols-lacp": {
+    "pattern": "^auto-fabric\\s+protocols\\s+lacp$",
+    "options": [
+      "admin-state"
+    ]
+  },
+
+
+
+"auto-fabric-protocols-mvrp-admin-state": {
+  "pattern": "^auto-fabric\\s+protocols\\s+mvrp\\s+admin-state$",
+  "options": [
+    "enable",
+    "disable"
+  ]
+},
+
+"auto-fabric-protocols-lacp-admin-state": {
+  "pattern": "^auto-fabric\\s+protocols\\s+lacp\\s+admin-state$",
+  "options": [
+    "enable",
+    "disable"
+  ]
+},
+
+  "auto-config-abort": {
+    "pattern": "^auto-config-abort$",
+    "options": []
+  },
+ "aaa": {
+    "pattern": "^aaa$",
+    "options": [
+      "admin-state",
+      "authentication",
+      "radius"
+    ]
+  },
+
+  "aaa-admin-state": {
+    "pattern": "^aaa\\s+admin-state$",
+    "options": [
+      "enable",
+      "disable"
+    ]
+  },
+
+  "aaa-authentication": {
+    "pattern": "^aaa\\s+authentication$",
+    "options": [
+      "login",
+      "enable"
+    ]
+  },
+
+  "aaa-authentication-login": {
+    "pattern": "^aaa\\s+authentication\\s+login$",
+    "options": [
+      "default"
+    ]
+  },
+
+  "aaa-authentication-enable": {
+    "pattern": "^aaa\\s+authentication\\s+enable$",
+    "options": [
+      "default"
+    ]
+  },
+
+  "aaa-radius": {
+    "pattern": "^aaa\\s+radius$",
+    "options": [
+      "server"
+    ]
+  },
+
+  "aaa-radius-server": {
+    "pattern": "^aaa\\s+radius\\s+server\\s+\\S+$",
+    "options": [
+      "address",
+      "key",
+      "auth-port"
+    ]
+  },
+
+  "aaa-radius-server-key": {
+    "pattern": "^aaa\\s+radius\\s+server\\s+\\S+\\s+key$",
+    "options": [
+      "<secret>"
+    ]
+  },
+    "qos": {
+        "pattern": "",
+        "options": [
+
+        ]
+    },
+    "auto-fabric-abort": {
+        "pattern": "",
+        "options": [
+
+        ]
+    },
+"session": {
+  "pattern": "^session$",
+  "options": [
+    "timeout",
+    "limit"
+  ]
+},
+
+"session-timeout": {
+  "pattern": "^session\\s+timeout$",
+  "options": [
+    "<minutes>"
+  ]
+},
+
+"session-limit": {
+  "pattern": "^session\\s+limit$",
+  "options": [
+    "<number>"
+  ]
+},
+"policy": {
+  "pattern": "^policy$",
+  "options": [
+    "rule",
+    "port",
+    "class",
+    "action"
+  ]
+},
+
+"policy-rule": {
+  "pattern": "^policy\\s+rule$",
+  "options": [
+    "<rule-name>"
+  ]
+},
+
+"policy-rule-name": {
+  "pattern": "^policy\\s+rule\\s+\\S+$",
+  "options": [
+    "class",
+    "action",
+    "enable"
+  ]
+},
+
+"policy-rule-class": {
+  "pattern": "^policy\\s+rule\\s+\\S+\\s+class$",
+  "options": [
+    "<class-name>"
+  ]
+},
+
+"policy-rule-action": {
+  "pattern": "^policy\\s+rule\\s+\\S+\\s+action$",
+  "options": [
+    "<action-name>"
+  ]
+},
+
+"policy-rule-enable": {
+  "pattern": "^policy\\s+rule\\s+\\S+\\s+enable$",
+  "options": []
+},
+
+"policy-port": {
+  "pattern": "^policy\\s+port$",
+  "options": [
+    "group"
+  ]
+},
+
+"policy-port-group": {
+  "pattern": "^policy\\s+port\\s+group$",
+  "options": [
+    "<group-name>"
+  ]
+},
+
+"policy-class": {
+  "pattern": "^policy\\s+class$",
+  "options": [
+    "<class-name>"
+  ]
+},
+
+"policy-action": {
+  "pattern": "^policy\\s+action$",
+  "options": [
+    "<action-name>"
+  ]
+},
+"interface": {
+  "pattern": "^(interface|interfaces)$",
+  "options": [
+    "ddm",
+    "ddm-trap",
+    "port"
+  ]
+},
+
+"interface-ddm": {
+  "pattern": "^(interface|interfaces)\\s+ddm$",
+  "options": [
+    "enable",
+    "disable"
+  ]
+},
+
+"interface-ddm-trap": {
+  "pattern": "^(interface|interfaces)\\s+ddm-trap$",
+  "options": [
+    "enable",
+    "disable"
+  ]
+},
+
+"interface-port": {
+  "pattern": "^(interface|interfaces)\\s+port$",
+  "options": [
+    "<chassis/slot/port>",
+    "<chassis/slot/port-port>"
+  ]
+},
+
+"interface-port-options": {
+  "pattern": "^(interface|interfaces)\\s+port\\s+\\S+$",
+  "options": [
+    "admin-state",
+    "autoneg",
+    "alias",
+    "hybrid-mode",
+    "speed"
+  ]
+},
+
+"interface-port-admin-state": {
+  "pattern": "^(interface|interfaces)\\s+port\\s+\\S+\\s+admin-state$",
+  "options": [
+    "enable",
+    "disable"
+  ]
+},
+
+"interface-port-autoneg": {
+  "pattern": "^(interface|interfaces)\\s+port\\s+\\S+\\s+autoneg$",
+  "options": [
+    "enable",
+    "disable"
+  ]
+},
+
+"interface-port-alias": {
+  "pattern": "^(interface|interfaces)\\s+port\\s+\\S+\\s+alias$",
+  "options": [
+    "<string>"
+  ]
+},
+
+"interface-port-hybrid-mode": {
+  "pattern": "^(interface|interfaces)\\s+port\\s+\\S+\\s+hybrid-mode$",
+  "options": [
+    "auto",
+    "copper",
+    "fiber"
+  ]
+},
+
+"interface-port-speed": {
+  "pattern": "^(interface|interfaces)\\s+port\\s+\\S+\\s+speed$",
+  "options": [
+    "auto",
+    "max"
+  ]
+},
+
+"interface-port-speed-max": {
+  "pattern": "^(interface|interfaces)\\s+port\\s+\\S+\\s+speed\\s+max$",
+  "options": [
+    "<integer>"
+  ]
+},
+"mvrp": {
+  "pattern": "^mvrp$",
+  "options": [
+    "admin-state",
+    "registration",
+    "timer"
+  ]
+},
+
+"mvrp-admin-state": {
+  "pattern": "^mvrp\\s+admin-state$",
+  "options": [
+    "enable",
+    "disable"
+  ]
+},
+
+"mvrp-registration": {
+  "pattern": "^mvrp\\s+registration$",
+  "options": [
+    "normal",
+    "fixed",
+    "forbidden"
+  ]
+},
+
+"mvrp-timer": {
+  "pattern": "^mvrp\\s+timer$",
+  "options": [
+    "join-time",
+    "leave-time",
+    "leave-all-time"
+  ]
+},
+
+"mvrp-timer-join-time": {
+  "pattern": "^mvrp\\s+timer\\s+join-time$",
+  "options": [
+    "<milliseconds>"
+  ]
+},
+
+"mvrp-timer-leave-time": {
+  "pattern": "^mvrp\\s+timer\\s+leave-time$",
+  "options": [
+    "<milliseconds>"
+  ]
+},
+
+"mvrp-timer-leave-all-time": {
+  "pattern": "^mvrp\\s+timer\\s+leave-all-time$",
+  "options": [
+    "<milliseconds>"
+  ]
+},
+    "lanpower": {
+  "pattern": "^lanpower$",
+  "options": [
+    "admin-state",
+    "class",
+    "priority",
+    "limit",
+    "mode",
+    "port"
+  ]
+},
+
+"lanpower-admin-state": {
+  "pattern": "^lanpower\\s+admin-state$",
+  "options": [
+    "enable",
+    "disable"
+  ]
+},
+
+"lanpower-class": {
+  "pattern": "^lanpower\\s+class$",
+  "options": [
+    "legacy",
+    "ieee"
+  ]
+},
+
+"lanpower-priority": {
+  "pattern": "^lanpower\\s+priority$",
+  "options": [
+    "critical",
+    "high",
+    "low"
+  ]
+},
+
+"lanpower-limit": {
+  "pattern": "^lanpower\\s+limit$",
+  "options": [
+    "<milliwatt>"
+  ]
+},
+
+"lanpower-mode": {
+  "pattern": "^lanpower\\s+mode$",
+  "options": [
+    "auto",
+    "forced"
+  ]
+},
+
+"lanpower-port": {
+  "pattern": "^lanpower\\s+port\\s+\\d+/\\d+/\\d+$",
+  "options": [
+    "admin-state",
+    "class",
+    "priority",
+    "limit",
+    "mode"
+  ]
+},
+
+"lanpower-port-admin-state": {
+  "pattern": "^lanpower\\s+port\\s+\\d+/\\d+/\\d+\\s+admin-state$",
+  "options": [
+    "enable",
+    "disable"
+  ]
+},
+
+"lanpower-port-class": {
+  "pattern": "^lanpower\\s+port\\s+\\d+/\\d+/\\d+\\s+class$",
+  "options": [
+    "legacy",
+    "ieee"
+  ]
+},
+
+"lanpower-port-priority": {
+  "pattern": "^lanpower\\s+port\\s+\\d+/\\d+/\\d+\\s+priority$",
+  "options": [
+    "critical",
+    "high",
+    "low"
+  ]
+},
+
+"lanpower-port-limit": {
+  "pattern": "^lanpower\\s+port\\s+\\d+/\\d+/\\d+\\s+limit$",
+  "options": [
+    "<milliwatt>"
+  ]
+},
+
+"lanpower-port-mode": {
+  "pattern": "^lanpower\\s+port\\s+\\d+/\\d+/\\d+\\s+mode$",
+  "options": [
+    "auto",
+    "forced"
+  ]
+}
+
+}
