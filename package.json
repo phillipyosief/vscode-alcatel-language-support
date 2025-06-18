@@ -2,13 +2,13 @@
   "name": "alcatel-language-support",
   "displayName": "alcatel-language-support",
   "description": "Provides full language support for Alcatel-Lucent switch configurations, including syntax highlighting, autocomplete, hover documentation, and integrated command reference.",
-  "version": "0.0.1",
-  "publisher": "Phillip Jerome Yosief",
+  "version": "0.0.2",
+  "publisher": "PhillipJeromeYosief",
   "author": {
     "name": "Phillip Jerome Yosief",
     "email": "phillip.yosief@outlook.com"
   },
-  "preview": true,
+  "preview": false,
   "icon": "assets/icon.png",
   "repository": {
     "type": "git",
