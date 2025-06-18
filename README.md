@@ -1,19 +1,99 @@
-# alcatel-language-support README
+# Alcatel Language Support for VS Code
 
-This extension provides language support for Alcatel-Lucent switch configurations, including syntax highlighting, autocomplete functionality, hover documentation, and an integrated command reference.
+<p align="center">
+  <img src="assets/icon.png" alt="Alcatel Language Support Logo" width="128" height="128">
+</p>
+
+<p align="center">
+  <a href="https://marketplace.visualstudio.com/items?itemName=alcatel-language-support">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/alcatel-language-support" alt="Version">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=alcatel-language-support">
+    <img src="https://img.shields.io/visual-studio-marketplace/d/alcatel-language-support" alt="Downloads">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=alcatel-language-support">
+    <img src="https://img.shields.io/visual-studio-marketplace/r/alcatel-language-support" alt="Rating">
+  </a>
+  <a href="https://github.com/yourusername/alcatel-language-support/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/yourusername/alcatel-language-support" alt="License">
+  </a>
+</p>
+
+## Overview
+
+This extension provides comprehensive language support for Alcatel-Lucent switch configurations, enhancing your workflow with syntax highlighting, intelligent autocomplete, hover documentation, and an integrated command reference.
+
+<p align="center">
+  <img src="assets/presentation.gif" alt="Alcatel Language Support Demo" width="700">
+</p>
 
 ## Features
 
-* **Syntax Highlighting**: Custom syntax highlighting for Alcatel config files, with special colorization for enable (green) and disable (red) keywords
-* **Auto-completion**: Context-aware command completion based on the current command structure
-* **Hover Information**: Shows information about commands when hovering over them
-* **Command Reference**: Integrated reference for Alcatel switch commands
+- **Syntax Highlighting**: Custom syntax highlighting for Alcatel config files
+  - Special colorization for `enable` (green) and `disable` (red) keywords
+  - Comment recognition with `!` prefix
+  - Command and parameter distinction
 
-![Syntax Highlighting Example](images/syntax-highlight-example.png)
+- **Intelligent Auto-completion**:
+  - Context-aware command suggestions based on the current command structure
+  - Support for both top-level commands and nested parameters
+  - Command parameters with appropriate descriptions
+
+- **Hover Information**:
+  - Displays detailed information about commands when hovering
+  - Shows available parameters for each command
+  - Command documentation on demand
+
+- **Command Reference**:
+  - Integrated reference for Alcatel switch commands
+  - Easy access to command syntax and parameters
+
+## Installation
+
+### From VS Code Marketplace
+1. Open VS Code
+2. Go to Extensions (Ctrl+Shift+X)
+3. Search for "Alcatel Language Support"
+4. Click Install
+
+### Manual Installation
+1. Download the `.vsix` file from the [releases page](https://github.com/yourusername/alcatel-language-support/releases)
+2. In VS Code, go to Extensions (Ctrl+Shift+X)
+3. Click on the "..." menu and select "Install from VSIX..."
+4. Select the downloaded file
+
+## Usage
+
+- Files with extensions `.ale` or `.alcatel` will automatically be recognized
+- Create or open an Alcatel configuration file
+- Use the integrated command completion by pressing Ctrl+Space
+- Hover over commands to see documentation
+- Use `!` at the beginning of a line to create comments
+
+### Configuration Examples
+
+```alcatel
+! Sample VLAN configuration
+vlan 10
+  name "Management VLAN"
+  admin-state enable
+  members port 1/1/1 untagged
+  
+! Interface configuration
+interface port 1/1/1
+  admin-state enable
+  alias "Uplink to Switch-B"
+  
+! IP configuration
+ip interface MGMT
+  address 192.168.1.1/24
+  vlan 10
+  admin-state enable
+```
 
 ## Requirements
 
-No special requirements or dependencies.
+No additional requirements or dependencies are needed.
 
 ## Extension Settings
 
@@ -21,22 +101,33 @@ This extension currently doesn't add any configurable settings.
 
 ## Known Issues
 
-None reported yet.
+None reported yet. If you encounter any problems, please [open an issue](https://github.com/yourusername/alcatel-language-support/issues).
+
+## Contributing
+
+Contributions are always welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Release Notes
 
 ### 1.0.0
 
-Initial release with syntax highlighting, autocomplete, and hover documentation.
+Initial release with:
+- Syntax highlighting
+- Auto-completion for commands and parameters
+- Hover documentation
 - Custom green highlighting for "enable" keywords
 - Custom red highlighting for "disable" keywords
 
 ---
 
-## Working with Alcatel Configuration Files
-
-* Files with extensions `.ale` or `.alcatel` will automatically be recognized
-* Comments begin with `!` character
-* Context-aware autocompletion will suggest valid command options
-
-**Enjoy!**
+**Enjoy configuring your Alcatel switches with enhanced editor support!**
