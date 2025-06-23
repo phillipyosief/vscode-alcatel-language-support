@@ -6,16 +6,13 @@
 
 <p align="center">
   <a href="https://marketplace.visualstudio.com/items?itemName=alcatel-language-support">
-    <img src="https://img.shields.io/visual-studio-marketplace/v/alcatel-language-support" alt="Version">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/PhillipJeromeYosief.alcatel-language-support" alt="Version">
   </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=alcatel-language-support">
-    <img src="https://img.shields.io/visual-studio-marketplace/d/alcatel-language-support" alt="Downloads">
+    <img src="https://img.shields.io/visual-studio-marketplace/d/PhillipJeromeYosief.alcatel-language-support" alt="Downloads">
   </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=alcatel-language-support">
-    <img src="https://img.shields.io/visual-studio-marketplace/r/alcatel-language-support" alt="Rating">
-  </a>
-  <a href="https://github.com/yourusername/alcatel-language-support/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/yourusername/alcatel-language-support" alt="License">
+    <img src="https://img.shields.io/visual-studio-marketplace/r/PhillipJeromeYosief.alcatel-language-support" alt="Rating">
   </a>
 </p>
 
@@ -30,7 +27,6 @@ This extension provides comprehensive language support for Alcatel-Lucent switch
 ## Features
 
 - **Syntax Highlighting**: Custom syntax highlighting for Alcatel config files
-  - Special colorization for `enable` (green) and `disable` (red) keywords
   - Comment recognition with `!` prefix
   - Command and parameter distinction
 
@@ -40,7 +36,7 @@ This extension provides comprehensive language support for Alcatel-Lucent switch
   - Command parameters with appropriate descriptions
 
 - **Hover Information**:
-  - Displays detailed information about commands when hovering
+  - Displays information about commands when hovering
   - Shows available parameters for each command
   - Command documentation on demand
 
@@ -57,7 +53,7 @@ This extension provides comprehensive language support for Alcatel-Lucent switch
 4. Click Install
 
 ### Manual Installation
-1. Download the `.vsix` file from the [releases page](https://github.com/yourusername/alcatel-language-support/releases)
+1. Download the `.vsix` file from the [releases page](https://github.com/phillipyosief/alcatel-language-support/releases)
 2. In VS Code, go to Extensions (Ctrl+Shift+X)
 3. Click on the "..." menu and select "Install from VSIX..."
 4. Select the downloaded file
@@ -101,7 +97,7 @@ This extension currently doesn't add any configurable settings.
 
 ## Known Issues
 
-None reported yet. If you encounter any problems, please [open an issue](https://github.com/yourusername/alcatel-language-support/issues).
+None reported yet. If you encounter any problems, please [open an issue](https://github.com/phillipyosief/alcatel-language-support/issues).
 
 ## Contributing
 
@@ -116,18 +112,5 @@ Contributions are always welcome! Please feel free to submit a Pull Request.
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Release Notes
-
-### 1.0.0
-
-Initial release with:
-- Syntax highlighting
-- Auto-completion for commands and parameters
-- Hover documentation
-- Custom green highlighting for "enable" keywords
-- Custom red highlighting for "disable" keywords
-
----
 
 **Enjoy configuring your Alcatel switches with enhanced editor support!**
